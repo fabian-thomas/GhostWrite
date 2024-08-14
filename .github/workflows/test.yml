@@ -11,12 +11,12 @@ jobs:
     name: Run Ghostwrite on ${{ matrix.board }}
     runs-on:
       - riscv-builders
-      - ${{ matrix.board }}
+      - ${{ matrix.soc }}
     strategy:
       matrix:
-        board:
-          - visionfive2
-          - licheepi-4a
+        soc:
+          - soc-spacemit-k1
+          - soc-starfive-jh7100
     steps:
     - uses: actions/checkout@v4
     - name: build
