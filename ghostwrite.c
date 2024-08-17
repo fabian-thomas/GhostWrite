@@ -1,4 +1,4 @@
-// NOTE: compile with any vector extension, e.g., -march="rv64gzve64x"
+// NOTE: compile with any vector extension, e.g., -march="rv64gzve64"
 
 #include <stdint.h>
 #include <stdio.h>
