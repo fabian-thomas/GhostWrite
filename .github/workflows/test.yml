@@ -17,9 +17,12 @@ jobs:
         soc:
           - soc-spacemit-k1
           - soc-starfive-jh7100
+          - soc-thead-1520
     steps:
     - uses: actions/checkout@v4
     - name: build
       run: gcc -march="rv64gvzve64x" ghostwrite.c -o ghostwrite
+    - name: cat-cpu
+      run: cat /proc/cpuinfo
     - name: run-test
       run: ./ghostwrite || true
